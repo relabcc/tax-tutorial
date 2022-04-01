@@ -1,0 +1,913 @@
+[
+    {
+        "id": 1,
+        "type": "intro",
+        "pathname": "introduction",
+        "state": "intro",
+        "description": {
+            "title": "不要再問媽媽了，今年報稅自己報",
+            "content": "媽媽，我要不要報稅啊？<br />媽，我要怎麼報稅？<br />媽，我報了稅然後？<br />年復一年，媽媽真的辛苦了。<br />今年，要給媽媽來點不一樣的。<br />用三個問答秒懂報稅，不再需要煩媽媽，<br />還給媽媽，一個清靜的母親節。"
+        },
+        "options": [
+            {
+                "name": "開始測驗",
+                "next": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "question",
+        "pathname": "dutiable",
+        "state": "dutiable",
+        "question": "哈囉！報稅第一步：<br />先確認自己是否需要報稅？",
+        "description": {
+            "title": "你的年收入是否超過以下加總？",
+            "table": {
+                "head": [
+                    {
+                        "name": "免稅額"
+                    },
+                    {
+                        "name": ""
+                    },
+                    {
+                        "name": "標準扣除額"
+                    }
+                ],
+                "body": [
+                    {
+                        "data": "88,000"
+                    },
+                    {
+                        "data": "＋"
+                    },
+                    {
+                        "data": "90,000（單身）"
+                    },
+                    {
+                        "data": ""
+                    },
+                    {
+                        "data": ""
+                    },
+                    {
+                        "data": "180,000（有配偶）"
+                    }
+                ]
+            },
+            "acquirements": [
+              {
+                "icon": "hint.svg",
+                "title": "小資上班族還可以加扣薪資所得特別扣除額128,000元（上限）喔！"
+              }
+            ]
+        },
+        "options": [
+            {
+                "name": "是",
+                "next": 4
+            },
+            {
+                "name": "否",
+                "next": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "question",
+        "pathname": "three-situation",
+        "state": "dutiable",
+        "question": "你是否符合以下任何一種情形？",
+        "multiDesc": [
+            {
+                "title": "可以申請退稅",
+                "desc": "有扣繳稅款及可扣抵稅額依法可申請退稅者，還是需辦理結算申報，才能退稅喔！"
+            },
+            {
+                "title": "有應申報的證券交易所得"
+            },
+            {
+                "title": "應辦理個人所得基本稅額申報者"
+            }
+        ],
+        "options": [
+            {
+                "name": "是",
+                "next": 4
+            },
+            {
+                "name": "否",
+                "next": 5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "type": "question",
+        "pathname": "spreadsheet-book",
+        "state": "calc",
+        "question": "你有沒有符合稅額試算資格？",
+        "description": {
+            "acquirementsHint": "國稅局會在每年4/25寄送稅額試算通知書，如果有收到就表示有符合資格，請按「是」。",
+            "acquirements": [
+                {
+                    "icon": "hint.svg",
+                    "title": "若沒收到稅額試算書，別急著按「否」，先查詢自己今年是否符合試算資格。若符合資格則可利用憑證上網自行下載，或拿身分證到國稅局補發，一樣可以使用試算服務喔！"
+                }
+            ],
+            "reminds": "首報族需在今年2/15~3/15申請試算服務才會收到通知書。|但如果你：|&nbsp;&nbsp;1.&nbsp;來不及申請服務|&nbsp;&nbsp;2.&nbsp;不符合試算資格|請按「否」教你如何自行申報！",
+            "link": {
+                "key": "qualifications",
+                "name": "查詢試算資格",
+                "url": "http://tax.nat.gov.tw/info_IBX_search.html?id=6"
+            }
+        },
+        "options": [
+            {
+                "name": "是",
+                "next": 6
+            },
+            {
+                "name": "否",
+                "next": 7
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "type": "answer",
+        "pathname": "no-tax",
+        "state": "finished",
+        "title": "恭喜你！<br />今年不用再報稅了！",
+        "links": [
+            {
+                "key": "link-facebook",
+                "title": "明年再來！",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "title": "推薦報稅指南給其他要報稅的朋友吧！",
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "type": "question",
+        "pathname": "correct-or-not",
+        "state": "calc",
+        "question": "核對你的稅額試算通知書內容是否正確？",
+        "description": {
+            "title": "1. 要核對哪些項目：所得、免稅額、扣除額及稅額計算。<br />2. 若不知道怎麼核對，讓「綜所稅試算小幫手」幫忙你吧！",
+            "link": {
+                "key": "helper",
+                "name": "綜所稅試算小幫手 ＞",
+                "url": "./formula"
+            }
+        },
+        "options": [
+            {
+                "name": "Ｏ<br />正確＋同意",
+                "next": 9
+            },
+            {
+                "name": "Ｘ<br />不正確/不同意",
+                "next": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "type": "select-answers",
+        "pathname": "select-methods",
+        "state": "result",
+        "requirements": [
+            {
+                "type": "cards",
+                "title": "需要自行申報的話(例如未收到稅額試算表或內容不正確)，請勾選你擁有的憑證或物品，我們將推薦最適合你的申報方法。(可複選)",
+                "multiple": 1,
+                "conditions": [
+                    {
+                      "icon": "health-id-card.svg",
+                      "name": "健保卡",
+                      "key": 15,
+                      "isSelected": 0
+                    },
+                    {
+                      "icon": "financial-documents.svg",
+                      "name": "金融憑證",
+                      "key": 13,
+                      "isSelected": 0
+                    },
+                    {
+                      "icon": "moica.svg",
+                      "name": "自然人憑證",
+                      "key": 16,
+                      "isSelected": 0
+                    },
+                    {
+                      "icon": "nothing.svg",
+                      "iconInvert": "nothing-invert.svg",
+                      "name": "我什麼都沒有",
+                      "key": -1,
+                      "isSelected": 1,
+                      "isOnly": 1
+                    }
+                ]
+            },
+            {
+                "type": "machine",
+                "title": "請問你有讀卡機嗎？",
+                "multiple": 0,
+                "conditions": [
+                    {
+                      "icon": "card-reader.svg",
+                      "name": "有",
+                      "key": 1,
+                      "isSelected": 0,
+                      "isOnly": 1
+                    },
+                    {
+                      "icon": "no-card-reader.svg",
+                      "name": "無",
+                      "key": 0,
+                      "isSelected": 1,
+                      "isOnly": 1
+                    }
+                ]
+            }
+        ],
+        "options": [
+            {
+                "name": "看看最適合你的申報方法",
+                "next": 10
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "type": "detail",
+        "pathname": "spreadsheet-book-detail",
+        "state": "other",
+        "question": "稅額試算表",
+        "description": {
+            "title": "可以使用財政部提供的線上稅額試算服務或參考下方稅額試算一覽表檢査自己的稅額是否正確。",
+            "links": [
+                {
+                  "key": "Online-spreadsheet-service-tax",
+                  "name": "線上稅額試算服務",
+                  "url": "https://goo.gl/llgdMp"
+                }
+            ]
+        },
+        "formula": [
+          {
+            "id": 1,
+            "title": "所得淨額試算算式",
+            "data": ",所得總額,－,免稅額,－,扣除額,＝,所得淨額"
+          },
+          {
+            "id": 2,
+            "title": "應納稅額試算算式",
+            "data": ",所得淨額,Ｘ,適用稅率,－,累進差額,＝,應繳稅額",
+            "detail": {
+              "title": "所得淨額試算項目",
+              "content": [
+                {
+                  "type": 1,
+                  "title": "各類所得來源",
+                  "data": "營利所得|執行業務所得|薪資|利息|租賃及權利金|自力耕作、漁、牧、林、礦所得|競技、競賽及機會中獎獎金|退職所得|其他"
+                },
+                {
+                  "type": 2,
+                  "title": "免稅額",
+                  "data": "一般|85,000|70歲以上的納稅義務人、配偶、直系尊親屬|127,500"
+                },
+                {
+                  "type": 2,
+                  "title": "標準扣除額",
+                  "data": "單身|90,000|有配偶|180,000"
+                },
+                {
+                  "type": 2,
+                  "title": "特別扣除額",
+                  "data": "薪資所得特別扣除額（每人）|128,000|儲蓄投資特別扣除額（每戶）|270,000|身心障礙特別扣除額（每人）|128,000|教育學費別扣除額（每人）|25,000|幼兒學前特別扣除額（每人）|25,000"
+                }
+              ]
+            }
+          },
+          {
+            "id": 3,
+            "title": "自行繳納稅額試算算式",
+            "data": ",應納稅額,－,扣繳稅額,－,抵扣稅額,＝,自行繳納稅額",
+            "detail": {
+              "title": "應納稅額試算公式",
+              "content": [
+                {
+                  "type": 3,
+                  "subtitle": "縱額所得稅額",
+                  "data": "0～540,000|5%|0|520,0011,170,000|12%|36,400|1,170,001～2,350,000|20%|130,000|2,350,001～4,400,000|30%|365,000|4,400,001～10,000,000|40%|805,000|10,000,000以上|45%|1,305,000"
+                }
+              ]
+            }
+          }
+        ]
+    },
+    {
+        "id": 9,
+        "type": "question",
+        "pathname": "spreadsheet-book-situation",
+        "state": "result",
+        "question": "確認你今年度應繳稅額是多少",
+        "description": {
+            "title": "稅額不同，完成申報的方式也不同喔！",
+            "noBorderTable": "應繳稅額|>0|→|繳稅的同時就完成申報||=0|→|回復確認||<0|→|回復確認＋選擇退稅方式"
+        },
+        "options": [
+            {
+                "name": ">0<br />我要繳稅",
+                "next": 12
+            },
+            {
+                "name": "=0或<0<br />不繳不退或退稅",
+                "next": 11
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "type": "answers-list",
+        "pathname": "recommend-methods-list",
+        "state": "finished",
+        "title": "根據你的狀況，最適合你的報稅方式是...",
+        "answers": [
+            {
+                "name": "金融憑證",
+                "pathname": "financial-documents",
+                "rate": 1,
+                "link": {
+                    "name": "點我看「金融憑證報稅流程」",
+                    "next": 13
+                },
+                "isNeedMachine": 0,
+                "content": {
+                    "noMachine": "共有25家銀行、保險、證券商的金融憑證可以用來報稅喔！"
+                }
+            },
+            {
+                "name": "自然人憑證",
+                "pathname": "moica",
+                "rate": 2,
+                "link": {
+                    "name": "點我看「自然人憑證報稅流程」",
+                    "next": 16
+                },
+                "isNeedMachine": 1,
+                "content": {
+                    "noMachine": "只要再買個讀卡機， 就能透過自然人憑證自動匯入資料， 輕鬆申報！",
+                    "hadMachine": "自然人憑證能輕鬆匯入所得及扣除額資料， 10分鐘完成報稅不是難事！"
+                }
+            },
+            {
+                "name": "健保卡+註冊密碼",
+                "pathname": "health-id-card",
+                "rate": 3,
+                "link": {
+                    "name": "點我看「健保卡報稅流程」",
+                    "next": 15
+                },
+                "isNeedMachine": 1,
+                "content": {
+                    "noMachine": "只要再買個讀卡機並上網註冊，就能用健保卡自動匯入資料，輕鬆申報！",
+                    "hadMachine": "人手一卡超方便，只要先上網完成註冊，健保卡除了看醫生外還可以報稅喔！"
+                }
+            },
+            {
+                "name": "身分證+戶號",
+                "pathname": "identity-card",
+                "rate": 4,
+                "link": {
+                    "name": "點我看「身分證+戶號報稅流程」",
+                    "next": 14
+                },
+                "isNeedMachine": 0,
+                "content": {
+                    "noMachine": "需要自行輸入資料， 或親到國稅局查調所得，較為麻煩。",
+                    "acquirements": [
+                        {
+                            "icon": "hint.svg",
+                            "title": "每年跑國稅局也不是辦法，最佳策略還是立即申辦憑證，只要再找台讀卡機，你也可以晉級「e化報稅達人」囉！"
+                        },
+                        {
+                            "icon": "hint.svg",
+                            "title": "各地區國稅局對於憑證報稅都會舉辦抽獎活動，也許意外之財就這樣到來。"
+                        }
+                    ]
+                }
+            }
+        ],
+        "links": [
+        {
+            "key": "all-methods",
+            "name": "看看其他報稅方法",
+            "url": "./all.html"
+          }
+        ]
+    },
+    {
+        "id": 11,
+        "type": "answer",
+        "pathname": "three-reply-methods",
+        "state": "finished",
+        "title": "回復國稅局就完成了！",
+        "description": {
+          "title": "3種回復方式",
+          "methods": {
+            "title": "回復時間 105/5/1～5/31",
+            "content": [
+                {
+                  "icon": "internet.svg",
+                  "title": "線上登錄",
+                  "content": "以憑證或身分證字號＋線上驗證碼為通行碼，進行線上回復確認。",
+                  "links": [
+                      {
+                        "key": "online-reply",
+                        "name": "線上登錄回復",
+                        "url": "https://goo.gl/R2bhBk"
+                      }
+                    ]
+                },
+                {
+                  "icon": "paper.svg",
+                  "title": "書面確認",
+                  "content": "填妥國稅局寄發的附表確認申報書，掛號郵寄或遞送至國稅局。"
+                },
+                {
+                  "icon": "phone.svg",
+                  "title": "電話語音確認",
+                  "content": "國稅局客服電話 0800-000-321"
+                },
+                {
+                    "icon": "hint.svg",
+                    "title": "電話語音確認小提醒",
+                    "content": "退稅案件需納稅義務人103年度結算申報以本人帳戶完成繳（退）稅，且104年度亦選擇沿用該帳戶辦理退稅者才適用"
+                }
+            ]
+        }
+      },
+      "links": [
+          {
+              "key": "link-facebook",
+              "name": "連至FB參加抽獎",
+              "url": "http://goo.gl/pw25tY"
+          },
+          {
+              "key": "all-methods",
+              "name": "看看其他報稅方法",
+              "url": "./all.html"
+          },
+          {
+              "key": "share-facebook",
+              "name": "分享報稅指南",
+              "url": "http://goo.gl/6Dt9Q5",
+              "share": 1
+          }
+      ]
+    },
+    {
+        "id": 12,
+        "type": "answer",
+        "pathname": "tax",
+        "state": "finished",
+        "title": "去繳稅囉！",
+        "content": {
+          "desc": "如果需要繳稅，只要在107/5/1~5/31完成繳稅，就算完成申報囉！<br />現金、支票、信用卡、轉帳都可以。",
+          "links": [
+              {
+                "key": "tax-methods",
+                "name": "各種繳稅方法說明",
+                "url": "https://goo.gl/eEJyTW"
+              }
+          ]
+        },
+        "links": [
+            {
+                "key": "link-facebook",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "type": "answer",
+        "pathname": "financial-documents",
+        "state": "finished",
+        "title": "金融憑證",
+        "steps": [
+            {
+                "title": "已有金融憑證",
+                "links": [
+                    {
+                        "key": "how-to-fin",
+                        "name": "如何申請金融憑證",
+                        "url": "https://goo.gl/QKtjGE"
+                    }
+                ]
+            },
+            {
+                "title": "下載所得及扣除額資料",
+                "operations": [
+                    {
+                        "icon": "download.svg",
+                        "name": "下載申報軟體"
+                    },
+                    {
+                        "icon": "internet.svg",
+                        "name": "將所得資料匯入程式"
+                    },
+                    {
+                        "icon": "manual-operation-10min.svg",
+                        "name": "根據指示操作"
+                    }
+                ],
+                "links": [
+                    {
+                        "key": "download-windows",
+                        "name": "申報軟體下載(Windows)",
+                        "url": "http://goo.gl/6Flgch"
+                    },
+                    {
+                        "key": "online-mac-linux",
+                        "name": "線上申報系統(Mac/Linux)",
+                        "url": "http://www.tax.nat.gov.tw/info_IRX_download.html?id=1"
+                    }
+                ]
+            },
+            {
+                "title": "申報結果查詢",
+                "desc": "到電子申報繳稅服務網站查詢是否完成申報",
+                "links": [
+                    {
+                        "key": "query-tax",
+                        "name": "查詢是否完成申報",
+                        "url": "http://goo.gl/DjGNxC"
+                    }
+                ]
+            }
+        ],
+        "links": [
+            {
+                "key": "link-facebook",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "type": "answer",
+        "pathname": "identity-card",
+        "state": "finished",
+        "title": "身份證字號＋<br />戶口名簿戶號申報",
+        "hint": "不需要另外辦理其他憑證，<br />但需至國稅局查調資料後匯入，或逐筆自行輸入資料。",
+        "steps": [
+            {
+                "title": "準備好以下物件",
+                "items": [
+                    {
+                        "icon": "identity-card.svg",
+                        "name": "身分證正本"
+                    },
+                    {
+                        "icon": "household-register.svg",
+                        "name": "戶口名簿戶號"
+                    }
+                ]
+            },
+            {
+                "title": "所得資料取得",
+                "acquirementsHint": "所得資料取得方式：",
+                "acquirements": [
+                    {
+                        "icon": "tax-nat.svg",
+                        "title": "親至各地區國稅局臨櫃查調所得及扣除額資料"
+                    }
+                ]
+            },
+            {
+                "title": "下載所得及扣除額資料",
+                "operations": [
+                    {
+                        "icon": "download.svg",
+                        "name": "下載申報軟體"
+                    },
+                    {
+                        "icon": "internet.svg",
+                        "name": "將所得資料匯入程式"
+                    },
+                    {
+                        "icon": "manual-operation-10min.svg",
+                        "name": "根據指示操作"
+                    }
+                ],
+                "links": [
+                    {
+                        "key": "download-windows",
+                        "name": "申報軟體下載(Windows)",
+                        "url": "http://goo.gl/6Flgch"
+                    },
+                    {
+                        "key": "online-mac-linux",
+                        "name": "線上申報系統(Mac/Linux)",
+                        "url": "http://www.tax.nat.gov.tw/info_IRX_download.html?id=1"
+                    }
+                ]
+            },
+            {
+                "title": "申報結果查詢",
+                "desc": "到電子申報繳稅服務網站查詢是否完成申報",
+                "links": [
+                    {
+                        "key": "query-tax",
+                        "name": "查詢是否完成申報",
+                        "url": "http://goo.gl/DjGNxC"
+                    }
+                ]
+            }
+        ],
+        "links": [
+            {
+                "key": "link-facebook",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "type": "answer",
+        "pathname": "health-id-card",
+        "state": "finished",
+        "title": "健保卡＋<br />註冊密碼",
+        "steps": [
+            {
+                "title": "準備好以下物件",
+                "items": [
+                    {
+                        "icon": "health-id-card.svg",
+                        "name": "健保卡"
+                    },
+                    {
+                        "icon": "household-register.svg",
+                        "name": "戶口名簿戶號"
+                    },
+                    {
+                        "icon": "email.svg",
+                        "name": "E-mail"
+                    },
+                    {
+                        "icon": "card-reader.svg",
+                        "name": "讀卡機"
+                    }
+                ],
+                "infos": [
+                    {
+                        "icon": "where.svg",
+                        "title": "哪裡買讀卡機？"
+                    },
+                    {
+                        "icon": "location.svg",
+                        "title": "一般便利商店、 網路、 3C用品店 "
+                    },
+                    {
+                        "icon": "how-much.svg",
+                        "title": "$100 ~ $300"
+                    }
+                ]
+            },
+            {
+                "title": "健保卡網路服務註冊",
+                "acquirementsHint": "註冊密碼有3種方式：",
+                "acquirements": [
+                    {
+                        "icon": "register.svg",
+                        "title": "a.網路註冊",
+                        "desc": "至健保署「健保卡網路服務註冊系統」辦理註冊",
+                        "links": [
+                            {
+                                "key": "register-health",
+                                "name": "前往註冊",
+                                "url": "https://goo.gl/d6cpp3"
+                            },
+                            {
+                                "key": "health-bag",
+                                "name": "健保卡註冊流程懶人包",
+                                "url": "http://goo.gl/4BVpMi"
+                            }
+                        ]
+                    },
+                    {
+                        "icon": "password.svg",
+                        "title": "b.臨櫃申請",
+                        "desc": "攜帶身分證明文件＋健保卡：<br />(1)至健保署各地區服務單位申辦<br />(2)至各地區國稅局申辦(5/2-5/31)"
+                    },
+                    {
+                        "icon": "paper.svg",
+                        "title": "c.投保單位整批註冊",
+                        "desc": "由投保單位替所屬保險對象（員工及眷屬）整批申請"
+                    }
+                ]
+            },
+            {
+                "title": "下載所得及扣除額資料",
+                "operations": [
+                    {
+                        "icon": "download.svg",
+                        "name": "下載申報軟體"
+                    },
+                    {
+                        "icon": "internet.svg",
+                        "name": "將所得資料匯入程式"
+                    },
+                    {
+                        "icon": "manual-operation-10min.svg",
+                        "name": "根據指示操作"
+                    }
+                ],
+                "links": [
+                    {
+                        "key": "download-windows",
+                        "name": "申報軟體下載(Windows)",
+                        "url": "http://goo.gl/6Flgch"
+                    },
+                    {
+                        "key": "online-mac-linux",
+                        "name": "線上申報系統(Mac/Linux)",
+                        "url": "http://www.tax.nat.gov.tw/info_IRX_download.html?id=1"
+                    }
+                ]
+            },
+            {
+                "title": "申報結果查詢",
+                "desc": "到電子申報繳稅服務網站查詢是否完成申報",
+                "links": [
+                    {
+                        "key": "query-tax",
+                        "name": "查詢是否完成申報",
+                        "url": "http://goo.gl/DjGNxC"
+                    }
+                ]
+            }
+        ],
+        "links": [
+            {
+                "key": "link-facebook",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "type": "answer",
+        "pathname": "moica",
+        "state": "finished",
+        "title": "自然人憑證",
+        "steps": [
+            {
+                "title": "準備好以下物件",
+                "items": [
+                    {
+                        "icon": "moica.svg",
+                        "name": "自然人憑證"
+                    },
+                    {
+                        "icon": "card-reader.svg",
+                        "name": "讀卡機"
+                    }
+                ],
+                "links": [
+                    {
+                        "key": "how-to-moica",
+                        "name": "如何申請自然人憑證",
+                        "url": "http://goo.gl/TLYrlO"
+                    }
+                ]
+            },
+            {
+                "title": "下載所得及扣除額資料",
+                "operations": [
+                    {
+                        "icon": "download.svg",
+                        "name": "下載申報軟體"
+                    },
+                    {
+                        "icon": "internet.svg",
+                        "name": "將所得資料匯入程式"
+                    },
+                    {
+                        "icon": "manual-operation-10min.svg",
+                        "name": "根據指示操作"
+                    }
+                ],
+                "links": [
+                    {
+                        "key": "download-windows",
+                        "name": "申報軟體下載(Windows)",
+                        "url": "http://goo.gl/6Flgch"
+                    },
+                    {
+                        "key": "online-mac-linux",
+                        "name": "線上申報系統(Mac/Linux)",
+                        "url": "http://www.tax.nat.gov.tw/info_IRX_download.html?id=1"
+                    }
+                ]
+            },
+            {
+                "title": "申報結果查詢",
+                "desc": "到電子申報繳稅服務網站查詢是否完成申報",
+                "links": [
+                    {
+                        "key": "query-tax",
+                        "name": "查詢是否完成申報",
+                        "url": "http://goo.gl/DjGNxC"
+                    }
+                ]
+            }
+        ],
+        "links": [
+            {
+                "key": "link-facebook",
+                "name": "連至FB參加抽獎",
+                "url": "http://goo.gl/pw25tY"
+            },
+            {
+                "key": "all-methods",
+                "name": "看看其他報稅方法",
+                "url": "./all.html"
+            },
+            {
+                "key": "share-facebook",
+                "name": "分享報稅指南",
+                "url": "http://goo.gl/6Dt9Q5",
+                "share": 1
+            }
+        ]
+    }
+]
